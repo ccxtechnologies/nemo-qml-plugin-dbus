@@ -1055,6 +1055,7 @@ void DeclarativeDBusInterface::connectPropertyHandler()
         }
 
         queryPropertyValues();
+        emit propertiesChanged();
     }
 }
 
@@ -1120,6 +1121,7 @@ void DeclarativeDBusInterface::updatePropertyValues(const QDBusArgument &argumen
 
             argument.endMapEntry();
         }
+        argument.endMap();
     }
 }
 
